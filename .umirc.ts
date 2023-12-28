@@ -14,7 +14,6 @@ export default defineConfig({
   routes: [
     {
       path: '/',
-      component: '@/layouts/CustomProLayout',
       // component: '@/layouts/CustomProLayout',
       // wrappers: ['@/wrappers/Auth'],
     },

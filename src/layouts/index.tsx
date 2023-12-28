@@ -126,6 +126,7 @@ export default (props: any) => {
         navigate('/');
       }}
       formatMessage={userConfig.formatMessage || formatMessage}
+      footerRender={() => <div>footer</div>}
       menu={{ locale: userConfig.locale }}
       logo={Logo}
       layout="mix"
