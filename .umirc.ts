@@ -6,7 +6,7 @@ export default defineConfig({
   model: {},
   initialState: {},
   request: {},
-  icons: {},
+  icons: { autoInstall: {} },
   layout: false,
   // layout: {
   //   title: '@umijs/max',
@@ -43,10 +43,15 @@ export default defineConfig({
       icon: 'local:hat-svgrepo-com',
     },
     {
-      name: ' CRUD 示例',
+      name: 'CRUD 示例',
       path: '/table',
       component: './Table',
       access: 'canAccessTable',
+    },
+    {
+      name: 'Form 试验场',
+      path: '/form',
+      component: './FormPlay',
     },
   ],
   npmClient: 'npm',

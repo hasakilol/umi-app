@@ -2,7 +2,7 @@
 
 import { useAccessMarkedRoutes } from '@@/plugin-access';
 import { useModel } from '@@/plugin-model';
-import { ProLayout } from '@ant-design/pro-components';
+import { DefaultFooter, ProLayout } from '@ant-design/pro-components';
 import { useMemo } from 'react';
 import type { IRoute } from 'umi';
 import {
@@ -126,7 +126,7 @@ export default (props: any) => {
         navigate('/');
       }}
       formatMessage={userConfig.formatMessage || formatMessage}
-      footerRender={() => <div>footer</div>}
+      footerRender={() => <DefaultFooter />}
       menu={{ locale: userConfig.locale }}
       logo={Logo}
       layout="mix"

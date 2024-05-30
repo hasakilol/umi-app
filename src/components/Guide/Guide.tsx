@@ -1,3 +1,4 @@
+import { Icon } from '@@/exports';
 import { Layout, Row, Typography } from 'antd';
 import React from 'react';
 import styles from './Guide.less';
@@ -15,6 +16,7 @@ const Guide: React.FC<Props> = (props) => {
         <Typography.Title level={3} className={styles.title}>
           欢迎使用 <strong>{name}</strong> ！
         </Typography.Title>
+        <Icon icon="ant-design:home" />
       </Row>
     </Layout>
   );

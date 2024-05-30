@@ -12,7 +12,7 @@ export async function getInitialState(): Promise<{
     setTimeout(() => {
       resolve({
         name: 'ye',
-        canAccessHome: window.location.host === 'localhost:8000' && false,
+        canAccessHome: window.location.host === 'localhost:8000' && true,
         canAccessTable: true,
       });
     }, 1000);
