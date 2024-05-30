@@ -1,4 +1,4 @@
-import { Form, Input } from 'antd';
+import { Form, Select } from 'antd';
 import { useEffect, useState } from 'react';
 
 /**
@@ -6,23 +6,34 @@ import { useEffect, useState } from 'react';
  * Components inside Form.Item with name property will turn into controlled mode, which makes defaultValue not work anymore. Please try initialValues of Form to set default value.
  *
  * 怎么好像说得不对啊？？？？
+ *
+ * initialValues 优先级高于 defaultValue
  */
 
-const FormPlay2: React.FC = () => {
+const FormPlay4: React.FC = () => {
+  const [form] = Form.useForm();
   const [initialValues, setInitialValues] = useState<
     { input: string } | undefined
-  >(undefined);
+  >({ input: 'world' });
 
   useEffect(() => {
-    setInitialValues({ input: 'world' });
+    setInitialValues({ input: 'test' });
   }, []);
+
   return (
-    <Form initialValues={initialValues}>
+    <Form initialValues={initialValues} form={form}>
       <Form.Item name="input">
-        <Input defaultValue="hello" />
+        <Select
+          options={[
+            { value: 'hello', label: 'hello' },
+            { value: 'world', label: 'world' },
+            { value: 'test', label: 'test' },
+          ]}
+          defaultValue="hello"
+        />
       </Form.Item>
     </Form>
   );
 };
 
-export default FormPlay2;
+export default FormPlay4;

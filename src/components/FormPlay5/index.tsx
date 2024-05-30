@@ -1,28 +1,36 @@
 import { Form, Input } from 'antd';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 /**
  * Why is component defaultValue not working when inside Form.Item?
  * Components inside Form.Item with name property will turn into controlled mode, which makes defaultValue not work anymore. Please try initialValues of Form to set default value.
  *
  * 怎么好像说得不对啊？？？？
+ *
+ * initialValues 优先级高于 defaultValue
  */
 
-const FormPlay2: React.FC = () => {
+interface CustomInputProps {
+  value?: string;
+}
+
+const CustomInput: React.FC<CustomInputProps> = (props) => {
+  return <Input />;
+};
+
+const FormPlay5: React.FC = () => {
+  const [form] = Form.useForm();
   const [initialValues, setInitialValues] = useState<
     { input: string } | undefined
-  >(undefined);
+  >({ input: 'world' });
 
-  useEffect(() => {
-    setInitialValues({ input: 'world' });
-  }, []);
   return (
-    <Form initialValues={initialValues}>
+    <Form initialValues={initialValues} form={form}>
       <Form.Item name="input">
-        <Input defaultValue="hello" />
+        <CustomInput />
       </Form.Item>
     </Form>
   );
 };
 
-export default FormPlay2;
+export default FormPlay5;
