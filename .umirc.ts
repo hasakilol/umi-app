@@ -53,6 +53,26 @@ export default defineConfig({
       path: '/form',
       component: './FormPlay',
     },
+    {
+      name: 'Ref Callback 试验场',
+      path: '/refcallback',
+      component: './RefCallbackPlay',
+    },
+    {
+      name: 'Postion: Sticky 试验场',
+      path: '/sticky',
+      component: './StickyPlay',
+    },
+    {
+      name: 'Width 试验场',
+      path: '/width',
+      component: './WidthPlay',
+    },
+    {
+      name: 'Encode/Decode 试验场',
+      path: '/encode-decode',
+      component: './EncodeDecodePlay',
+    },
   ],
   npmClient: 'npm',
   writeToDisk: true,
