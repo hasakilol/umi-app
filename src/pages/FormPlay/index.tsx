@@ -6,6 +6,7 @@ import FormPlay13 from '@/components/FormPlay13';
 import FormPlay14 from '@/components/FormPlay14';
 import FormPlay15 from '@/components/FormPlay15';
 import FormPlay16 from '@/components/FormPlay16';
+import FormPlay17 from '@/components/FormPlay17';
 import FormPlay2 from '@/components/FormPlay2';
 import FormPlay3 from '@/components/FormPlay3';
 import FormPlay4 from '@/components/FormPlay4';
@@ -34,6 +35,7 @@ const FormPlay: React.FC = () => {
       <FormPlay14 />
       <FormPlay15 />
       <FormPlay16 />
+      <FormPlay17 />
     </>
   );
 };

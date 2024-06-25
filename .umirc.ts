@@ -73,6 +73,11 @@ export default defineConfig({
       path: '/encode-decode',
       component: './EncodeDecodePlay',
     },
+    {
+      name: 'Generator 试验场',
+      path: '/generator',
+      component: './GeneratorPlay',
+    },
   ],
   npmClient: 'npm',
   writeToDisk: true,
